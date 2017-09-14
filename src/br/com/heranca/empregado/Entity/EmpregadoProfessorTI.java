@@ -20,7 +20,7 @@ public class EmpregadoProfessorTI extends EmpregadoProfessor {
         super(nome, cpf, area, titulo);
         this.numHorasSalaDeAula = numHorasSalaDeAula;
         this.numHorasAdministrativas = calculaHorasAdministrativas();
-        salario = calculaSalario(numHoras);
+        salario = super.calculaSalario(numHoras);
     }
     
     private int calculaHorasAdministrativas(){

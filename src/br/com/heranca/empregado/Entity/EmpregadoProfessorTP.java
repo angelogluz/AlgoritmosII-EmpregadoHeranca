@@ -14,13 +14,13 @@ public class EmpregadoProfessorTP extends EmpregadoProfessor {
 
     private final int numHoras = 140;
     private int numHorasSalaDeAula;
-    private int numHorasAdministrativas;
+    private final int numHorasAdministrativas;
 
     public EmpregadoProfessorTP(String nome, Cpf cpf, String area, Titulacao titulo, int numHorasSalaDeAula) {
         super(nome, cpf, area, titulo);
         this.numHorasSalaDeAula = numHorasSalaDeAula;
         this.numHorasAdministrativas = calculaHorasAdministrativas();
-        salario = calculaSalario(numHoras);
+        salario = super.calculaSalario(numHoras);
     }
 
     private int calculaHorasAdministrativas() {

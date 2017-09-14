@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.heranca.empregado.Entity;
 
 /**
@@ -9,8 +5,18 @@ package br.com.heranca.empregado.Entity;
  * @author Angelo
  */
 public enum Titulacao {
-    GRADUADO,
-    POSGRADUADO,
-    MESTRE,
-    DOUTOR;   
+    GRADUADO("Grad"),
+    POSGRADUADO("PG"),
+    MESTRE("Me"),
+    DOUTOR("Dr"); 
+
+    private final String abrev;
+
+    private Titulacao(String abrev) {
+        this.abrev = abrev;   
+    }
+
+    public String getAbreviatura() {
+        return abrev;
+    }   
 }
